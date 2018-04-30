@@ -3,10 +3,12 @@ https://code.tutsplus.com/tutorials/quick-tip-how-to-work-with-github-and-multip
 
 ## Generate public and private ssh keys
 `ssh-keygen -t rsa -C "your-email-address"`
+
 When prompted where to save, save the file as id_rsa_COMPANY
 
 ## Add the new identity
 `ssh-add ~/.ssh/id_rsa_COMPANY`
+
 You will see identity added once it's added
 
 ## Modify ssh config
@@ -20,6 +22,7 @@ Host github.com
   HostName github.com
   User git
   IdentityFile ~/.ssh/id_rsa
+  
 Host github-COMPANY
   HostName github.com
   User git
